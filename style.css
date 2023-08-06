@@ -677,3 +677,312 @@ nav {
     body will be changed simultaneosly.  */
     background: #0a0a0a;
 }
+
+
+/* css for profile page */
+
+.profile-container {
+    /* top & bottom is 20px
+    left & right is 15% */
+    padding: 20px 15%;
+    color: #626262;
+}
+
+.profile-container .cover-img {
+    /* it will occupy 100% of the available space. */
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 14px;
+}
+
+.profile-details {
+    background: var(--bg-color);
+    padding: 20px;
+    border-radius: 4px;
+    /* default flex direction is horizontal */
+    display: flex;
+    /* crossAxisAlignment */
+    align-items: flex-start;
+    /* mainAxisAlignment */
+    justify-content: space-between;
+}
+
+.pd-row {
+    display: flex;
+    align-items: flex-start;
+}
+
+.pd-img {
+    width: 100px;
+    margin-right: 20px;
+    border-radius: 6px;
+}
+
+.pd-row div h3 {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.pd-row div p {
+    font-size: 13px;
+}
+
+.pd-row div img {
+    width: 25px;
+    border-radius: 50%;
+    margin-top: 25px;
+}
+
+.pd-right button {
+    background: #1876f2;
+    border: 0;
+    outline: 0;
+    padding: 6px 10px;
+    display: inline-flex;
+    align-items: center;
+    color: #fff;
+    border-radius: 3px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.pd-right button img {
+    height: 15px;
+    margin-right: 10px;
+}
+
+.pd-right button:first-child {
+    background: #e4e6eb;
+    color: #000;
+}
+
+.pd-right {
+    text-align: right;
+}
+
+.pd-right a {
+    background: #e4e6eb;
+    border-radius: 3px;
+    padding: 12px;
+    display: inline-flex;
+    margin-top: 30px;
+}
+
+.pd-right a img {
+    width: 20px;
+}
+
+.profile-info {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.info-col {
+    /* it will occupy 33% of the parent's
+    available space. */
+    flex-basis: 33%;
+}
+
+.post-col {
+    /* we have 2% left */
+    flex-basis: 65%;
+}
+
+.profile-intro {
+    background: var(--bg-color);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.profile-intro h3 {
+    font-weight: 600;
+}
+
+.intro-text {
+    text-align: center;
+    /* top & bottom is 10px
+    left & right is 0px */
+    margin: 10px 0;
+    font-size: 15px;
+}
+
+.intro-text img {
+    width: 15px;
+    margin-bottom: -3px;
+}
+
+.profile-intro hr {
+    border: 0;
+    height: 1px;
+    background: #ccc;
+    margin: 24px 0;
+}
+
+.profile-intro ul li {
+    list-style: none;
+    font-size: 15px;
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+}
+
+.profile-intro ul li img {
+    width: 26px;
+    margin-right: 10px;
+}
+
+.title-box {
+    /* default flex direction is horizontal */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title-box a {
+    /* so as to remove the underline
+    from the link */
+    text-decoration: none;
+    color: #1876f2;
+    font-size: 14px;
+}
+
+.photo-box {
+    /* form a grid of images */
+    display: grid;
+    /* repeat 3 image per column */
+    grid-template-columns: repeat(3, auto);
+    grid-gap: 10px;
+    margin-top: 15px;
+}
+
+.photo-box div img {
+    /* 100% of the available space */
+    width: 100%;
+    cursor: pointer;
+}
+
+.profile-info p {
+    font-size: 14px;
+}
+
+.friends-box {
+    /* form a grid of images */
+    display: grid;
+    /* repeat 3 image per column */
+    grid-template-columns: repeat(3, auto);
+    grid-gap: 10px;
+    margin-top: 15px;
+}
+
+.friends-box div img {
+    /* 100% of the available space */
+    width: 100%;
+    cursor: pointer;
+    padding-bottom: 20px;
+}
+
+.friends-box div {
+    /* positioned relative to its original 
+    position in the document. */
+    position: relative;
+}
+
+.friends-box p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+
+/* mediaquery for smaller screens */
+
+
+/* home page */
+
+@media (max-width: 900px) {
+    .right-sidebar {
+        display: none;
+    }
+    .left-sidebar {
+        display: none;
+    }
+    nav {
+        flex-wrap: wrap;
+    }
+    .search-box {
+        display: none;
+    }
+    .logo {
+        width: 110px;
+        margin-right: 20px;
+    }
+    .nav-left ul li img {
+        width: 20px;
+        margin: 0 8px;
+    }
+    .nav-user-icon img {
+        width: 30px;
+        margin-left: 0;
+    }
+    .add-post-links {
+        flex-wrap: wrap;
+    }
+    .main-content {
+        flex-basis: 100%;
+    }
+    .story img {
+        width: 20px;
+        border-width: 3px;
+    }
+    .story p {
+        font-size: 10px;
+    }
+    .story.story1 img {
+        width: 25px;
+        bottom: 30px;
+    }
+    .add-post-links a {
+        margin-right: 12px;
+        font-size: 9px;
+    }
+    .add-post-links a img {
+        width: 16px;
+        margin-right: 5px;
+    }
+    .post-input-container {
+        padding-left: 0;
+    }
+}
+
+
+/* mediaquery for profile page */
+
+@media (max-width: 900px) {
+    .profile-container {
+        padding: 2px 5%;
+    }
+    .profile-details {
+        flex-wrap: wrap;
+    }
+    .pd-right {
+        text-align: left;
+        margin-top: 15px;
+    }
+    .pd-right button {
+        margin-left: 0;
+        margin-right: 10px;
+    }
+    .pd-row div h3 {
+        font-size: 16px;
+    }
+    .profile-info {
+        flex-wrap: wrap;
+    }
+    .info-col,
+    .post-col {
+        flex-basis: 100%;
+    }
+}
